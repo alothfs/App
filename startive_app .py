@@ -19,6 +19,7 @@ from PIL import Image
 from io import BytesIO
 import base64
 from sklearn.cluster import KMeans
+import plotly.express as px
 
 # Set page configuration
 st.set_page_config(
