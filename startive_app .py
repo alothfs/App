@@ -28,6 +28,27 @@ st.set_page_config(
     layout="wide"
 )
 
+# Sample dataset for visualization
+def load_data():
+    return px.data.gapminder()
+
+# Streamlit App Title
+st.title("Startive App - Data Visualization")
+
+# Load Data
+df = load_data()
+
+# Sidebar selection for country
+country = st.sidebar.selectbox("Select a country:", df["country"].unique())
+
+# Filter data based on selection
+filtered_data = df[df["country"] == country]
+
+# Plotly Line Chart
+fig = px.line(filtered_data, x="year", y="gdpPercap", title=f"GDP Per Capita Over Time for {country}")
+
+# Display in Streamlit
+st.plotly_chart(fig)
 
 # Colors from the logo
 PRIMARY_COLOR = "#8E85A6"  # Light purple
