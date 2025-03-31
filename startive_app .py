@@ -699,4 +699,3 @@ if __name__ == "__main__":
     # This code has already been executed above
     pass
 
-!streamlit run startive_app.py
