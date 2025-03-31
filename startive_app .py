@@ -7,10 +7,6 @@ Original file is located at
     https://colab.research.google.com/drive/1r7zeoXbqlPgEgYefcE1X9eIoXGIS8u-p
 """
 
-pip install streamlit
-
-pip install streamlit pandas numpy plotly pillow
-
 import streamlit as st
 import pandas as pd
 import numpy as np
